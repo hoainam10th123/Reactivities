@@ -1,0 +1,13 @@
+a{
+    color: white !important;
+    text-decoration: none !important;
+  }
+
+.nav-link{
+    padding: .5rem 1rem;
+}
+
+.float-right {
+  margin-left: auto;
+  order: 2;
+}
