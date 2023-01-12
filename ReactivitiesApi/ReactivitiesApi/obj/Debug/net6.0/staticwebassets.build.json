@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "J9GRE7CKQo3qirPG5jceMIvlu66MTQSM3A6q7ZNgRqc=",
+  "Source": "ReactivitiesApi",
+  "BasePath": "_content/ReactivitiesApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ReactivitiesApi\\wwwroot",
+      "Source": "ReactivitiesApi",
+      "ContentRoot": "D:\\Nam\\React\\Reactivities\\ReactivitiesApi\\ReactivitiesApi\\wwwroot\\",
+      "BasePath": "_content/ReactivitiesApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

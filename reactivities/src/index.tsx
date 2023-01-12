@@ -7,25 +7,16 @@ import 'react-calendar/dist/Calendar.css';
 import 'react-toastify/dist/ReactToastify.css';
 import "react-datepicker/dist/react-datepicker.css";
 import { store, StoreContext } from './app/stores/store';
-import { createBrowserHistory } from 'history';
-import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
-import ScrollToTop from './app/layout/ScrollToTop';
+import { RouterProvider } from "react-router-dom";
+import { router } from './app/router/Routes';
 
-export const history = createBrowserHistory({ window });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <StoreContext.Provider value={store}>
-    <HistoryRouter history={history}>
-      <ScrollToTop />
-      <App />
-    </HistoryRouter>
-
-    {/* <BrowserRouter>
-      <App />
-    </BrowserRouter> */}
+    <RouterProvider router={router} />
   </StoreContext.Provider>
 );
 

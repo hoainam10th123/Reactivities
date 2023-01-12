@@ -1,32 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DOTNETCORECODE\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj": {}
+    "D:\\Nam\\React\\Reactivities\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj": {}
   },
   "projects": {
-    "E:\\DOTNETCORECODE\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj": {
+    "D:\\Nam\\React\\Reactivities\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DOTNETCORECODE\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj",
+        "projectUniqueName": "D:\\Nam\\React\\Reactivities\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj",
         "projectName": "ReactivitiesApi",
-        "projectPath": "E:\\DOTNETCORECODE\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj",
+        "projectPath": "D:\\Nam\\React\\Reactivities\\ReactivitiesApi\\ReactivitiesApi\\ReactivitiesApi.csproj",
         "packagesPath": "C:\\Users\\hoain\\.nuget\\packages\\",
-        "outputPath": "E:\\DOTNETCORECODE\\ReactivitiesApi\\ReactivitiesApi\\obj\\",
+        "outputPath": "D:\\Nam\\React\\Reactivities\\ReactivitiesApi\\ReactivitiesApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\hoain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,46 +42,46 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[12.0.0, )"
             },
             "CloudinaryDotNet": {
               "target": "Package",
-              "version": "[1.17.0, )"
+              "version": "[1.20.0, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[11.0.1, )"
+              "version": "[11.2.2, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[10.0.1, )"
+              "version": "[11.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.16, )"
+              "version": "[6.0.13, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -85,16 +90,11 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.16, 5.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -103,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,10 +1,10 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { toast } from 'react-toastify';
-import { history } from '../..';
 import { ActivityFormValues, IActivity } from '../models/activity';
 import { PaginatedResult } from '../models/pagination';
 import { IPhoto, IProfile, IUserActivity } from '../models/profile';
 import { IUser, UserFormValues } from '../models/user';
+import { router } from '../router/Routes';
 import { store } from '../stores/store';
 
 const sleep = (delay: number) => {
@@ -17,7 +17,7 @@ axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 axios.interceptors.request.use(config => {
     const token = store.commonStore.token;
-    if (token) config.headers!.Authorization = `Bearer ${token}`
+    if (token && config.headers) config.headers = {Authorization: `Bearer ${token}`}
     return config;
 })
 
@@ -57,11 +57,11 @@ axios.interceptors.response.use(async respone => {
             toast.error('unauthorised!');
             break;
         case 404:
-            history.push('/not-found');
+            router.navigate('/not-found');
             break;
         case 500:
             store.commonStore.setServerError(data as any);
-            history.push('/server-error');
+            router.navigate('/server-error');
             break;
     }
     return Promise.reject(error);

@@ -1,7 +1,7 @@
 import { makeAutoObservable, runInAction } from "mobx";
-import { history } from "../..";
 import agent from "../api/agent";
 import { IUser, UserFormValues } from "../models/user";
+import { router } from "../router/Routes";
 import { store } from "./store";
 
 export default class UserStore{
@@ -20,7 +20,7 @@ export default class UserStore{
             store.commonStore.setToken(user.token);
             //this.startRefreshTokenTimer(user);
             runInAction(() => this.user = user);
-            history.push('/activities');            
+            router.navigate('/activities');            
             store.modalStore.closeModal();
         } catch (error) {
             throw error;
@@ -31,7 +31,7 @@ export default class UserStore{
         store.commonStore.setToken(null);
         window.localStorage.removeItem('jwt');
         this.user = null;
-        history.push('/');
+        router.navigate('/');
     }
 
     getUser = async () => {
@@ -50,8 +50,8 @@ export default class UserStore{
             const user = await agent.Account.register(creds);
             store.commonStore.setToken(user.token);
             runInAction(() => this.user = user);
-            history.push('/activities');
-            //history.push(`/account/registerSuccess?email=${creds.email}`);
+            router.navigate('/activities');
+            //router.navigate(`/account/registerSuccess?email=${creds.email}`);
             store.modalStore.closeModal();
         } catch (error) {
             throw error;
