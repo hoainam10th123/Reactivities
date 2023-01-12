@@ -1,0 +1,46 @@
+update to react 18:
+
+npm install react@latest react-dom@latest react-scripts@latest
+
+npm outdated
+
+npm i -g npm-check-updates && ncu -u && npm i
+
+npm outdated
+
+ = `Bearer ${token}`
+ 
+ tom@test.com, jane@test.com, bob@test.com
+ Pa$$w0rd
+
+<Routes>
+	  <Route index element={<HomePage />} />
+
+	  <Route path="/activities"
+		element={(
+		  <PrivateWrapper><ActivityDashboard /></PrivateWrapper>
+		)}/>
+
+	  <Route path='/activities/:id' element={(
+		<PrivateWrapper><ActivityDetails /></PrivateWrapper>
+	  )}/>
+
+	  <Route path='/create-activity' element={(
+		<PrivateWrapper><ActivityForm /></PrivateWrapper>
+	  )}/>
+
+	  <Route path='/manage/:id' element={(
+		<PrivateWrapper><ActivityForm /></PrivateWrapper>
+	  )}/>
+
+	  <Route path='/profile/:username' element={(
+		<PrivateWrapper><ProfilePage /></PrivateWrapper>
+	  )}/>
+
+	  <Route path='/errors' element={(
+		<PrivateWrapper><TestErrors /></PrivateWrapper>
+	  )} />
+	  
+	  <Route path='/server-error' element={<ServerErrorView />} />
+	  <Route path="*" element={<NotFound />} />
+</Routes>
